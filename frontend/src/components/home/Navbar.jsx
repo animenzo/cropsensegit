@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {/* DESKTOP NAV */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -51,7 +51,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA BUTTON */}
         <div className="hidden md:block">
