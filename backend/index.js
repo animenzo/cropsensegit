@@ -37,7 +37,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin:[
-      "http://localhost:5173"
+      "http://localhost:5173",
+      "https://cropsense-back.onrender.com"
     ], 
     credentials: true,
     
