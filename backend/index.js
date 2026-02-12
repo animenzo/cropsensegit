@@ -38,7 +38,7 @@ app.use(
   cors({
     origin:[
       "http://localhost:5173",
-      "https://cropsense-back.onrender.com"
+      "https://cropsense-ruddy.vercel.app"
     ], 
     credentials: true,
     
