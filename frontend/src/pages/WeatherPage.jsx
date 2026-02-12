@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getCoordinates, getWeather, getWeatherIcon } from "../services/weatherService";
 import { FaMapMarkerAlt, FaWind, FaTint, FaSun, FaMoon, FaUmbrella } from "react-icons/fa";
 import { WiSunrise, WiSunset } from "react-icons/wi";
-
+// 
 const WeatherPage = () => {
   const [city, setCity] = useState("New Delhi"); // Default
   const [weather, setWeather] = useState(null);

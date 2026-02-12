@@ -25,7 +25,7 @@ export const getWeather = async (lat, lon) => {
     return null;
   }
 };
-
+// 
 // 3. Helper to map WMO codes to Icons/Labels
 export const getWeatherIcon = (code) => {
     // WMO Weather interpretation codes (0-99)

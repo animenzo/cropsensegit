@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiArrowRight } from 'react-icons/fi';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { FiMenu, FiX, FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,31 +9,27 @@ const Navbar = () => {
   const handleGetStarted = () => {
     navigate("/login");
     setIsMobileMenuOpen(false);
-  }
+  };
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Product', href: '#' },
-    { name: 'Technology', href: '#' },
-    { name: 'Impact', href: '#' },
-    { name: 'About', href: '#' },
+    { name: "Product", href: "#" },
+    { name: "Technology", href: "#" },
+    { name: "Impact", href: "#" },
+    { name: "About", href: "#" },
   ];
 
   return (
-    <nav
-      className='fixed top-0 left-0 w-full z-50 transition-all duration-300  bg-transparent py-6'
-      
-    >
+    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300  bg-transparent py-6">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        
         {/* LOGO */}
         <div className="flex items-center gap-2 cursor-pointer z-50">
           <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
@@ -59,11 +55,14 @@ const Navbar = () => {
 
         {/* CTA BUTTON */}
         <div className="hidden md:block">
-          <button onClick={handleGetStarted} className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-             isScrolled 
-             ? 'bg-white text-neutral-900 hover:bg-neutral-200'
-             : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/10'
-          }`}>
+          <button
+            onClick={handleGetStarted}
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
+              isScrolled
+                ? "bg-white text-neutral-900 hover:bg-neutral-200"
+                : "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/10"
+            }`}
+          >
             Get Started
           </button>
         </div>
@@ -80,7 +79,9 @@ const Navbar = () => {
       {/* MOBILE MENU OVERLAY */}
       <div
         className={`fixed inset-0 bg-neutral-950 flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${
-          isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+          isMobileMenuOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0"
         }`}
       >
         {navLinks.map((link) => (
@@ -93,7 +94,10 @@ const Navbar = () => {
             {link.name}
           </a>
         ))}
-        <button onClick={handleGetStarted} className="mt-4 px-8 py-3 rounded-full bg-emerald-500 text-neutral-900 font-bold flex items-center gap-2">
+        <button
+          onClick={handleGetStarted}
+          className="mt-4 px-8 py-3 rounded-full bg-emerald-500 text-neutral-900 font-bold flex items-center gap-2"
+        >
           Get Started <FiArrowRight />
         </button>
       </div>
